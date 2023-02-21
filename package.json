@@ -1,0 +1,29 @@
+{
+  "name": "jdpro_u_backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon ./server.js",
+    "scrap": "node ./scraper/index.js"
+  },
+  "author": "SamuelAMZ",
+  "license": "ISC",
+  "dependencies": {
+    "@hapi/joi": "^17.1.1",
+    "axios": "^1.3.3",
+    "bcrypt": "^5.1.0",
+    "connect-timeout": "^1.9.0",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "extract-domain": "^2.4.8",
+    "jsonwebtoken": "^9.0.0",
+    "mongoose": "^6.8.1",
+    "stripe": "^11.11.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
