@@ -56,15 +56,13 @@ addNewUsername.post("/", async (req, res) => {
   }
 
   if (totalItemsLength >= maxUsername) {
-    return res
-      .status(400)
-      .json({
-        message: "have reached the max usernames of tour plan",
-        code: "bad",
-      });
+    return res.status(400).json({
+      message: "have reached the max usernames of your plan",
+      code: "bad",
+    });
   }
 
-  // add link to skiped domain doc
+  // create new username
   const skiped = new Usernames({
     uid,
     username,
@@ -75,7 +73,7 @@ addNewUsername.post("/", async (req, res) => {
     await skiped.save();
 
     res.status(200).json({
-      message: "username Added successfully",
+      message: "username added successfully",
       code: "ok",
     });
     return;
